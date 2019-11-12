@@ -1,6 +1,11 @@
 import React from "react";
 
+//components
+// job row
+// input field?
+
 const Search = props => {
+  // mapping unique categories to display as buttons
   const categories = props.jobs ? props.jobs.map(el => el.category) : null;
   let categoryButtons = categories
     ? [...new Set(categories)].map(category => {
@@ -9,7 +14,7 @@ const Search = props => {
             key={category}
             onClick={() => props.categoryChangeHandler(category)}
           >
-            #{category}
+            #{category.toUpperCase()}
           </button>
         );
       })

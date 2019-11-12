@@ -1,5 +1,9 @@
 import React from "react";
 
+// components
+// job row
+//
+
 const Results = props => {
   let finalList = props.jobs ? props.jobs : <p>Awaiting data....</p>;
 
@@ -21,11 +25,14 @@ const Results = props => {
         )
       : categoryFilter;
 
-  finalList = inputFilter
-    ? inputFilter.map(job => {
+  finalList =
+    inputFilter.length !== 0 ? (
+      inputFilter.map(job => {
         return <li key={job.id}>{job.title}</li>;
       })
-    : null;
+    ) : (
+      <p>No results found...</p>
+    );
 
   return <ul>{finalList}</ul>;
 };
