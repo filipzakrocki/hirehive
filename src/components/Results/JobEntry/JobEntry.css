@@ -1,0 +1,46 @@
+.JobEntry {
+    list-style: none;
+}
+
+.JobEntry-content__wrapper {
+    cursor: pointer;
+    display: inline-flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+    padding: 3% 0;
+    border-bottom: 1px solid gray;
+    color: black;
+    font-size: 20px;
+    float: left;
+    outline: none;
+}
+.JobEntry-content__wrapper:hover {
+    transform: scale(1.05);
+    transition: 0.15s ease-in-out;
+}
+
+.JobEntry-title {
+    flex: 5;
+    font-size: 18px;
+}
+.JobEntry-category {
+    flex: 3;
+    font-size: 14px;
+}
+.JobEntry-location {
+    flex: 3;
+    font-size: 14px;
+    color: gray;
+}
+
+.JobEntr-arrow {
+    flex: 1;
+    float: right;
+    font-size: 20px;
+    margin-right: 20px;
+}

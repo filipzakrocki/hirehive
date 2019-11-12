@@ -12,12 +12,16 @@ function App() {
   // hook for API data fetching once when component is rendered
   useEffect(() => {
     async function fetchJobs() {
+      try {
       const results = await axios.get(
         "https://hirehive-testing-account.hirehive.com/api/v1/jobs"
       );
       const jobs = await results.data.jobs;
       console.log(jobs); // ----------------------------------------------------
       setJobs(jobs);
+      } catch(error) {
+        console.log(error)
+      }
     }
     fetchJobs();
   }, []);
@@ -26,6 +30,7 @@ function App() {
   const [jobs, setJobs] = useState();
   const [inputFilter, setinputFilter] = useState();
   const [category, setCategory] = useState();
+
 
   //input handlers for 'search' component
   const filterChangeHandler = input => {
@@ -49,6 +54,7 @@ function App() {
     <div className="App">
       <Search
         jobs={jobs}
+        category={category}
         filterChangeHandler={e => filterChangeHandler(e.target.value)}
         categoryChangeHandler={categoryChangeHandler}
       />

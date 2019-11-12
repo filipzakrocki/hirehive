@@ -6,4 +6,12 @@
     width: 100%;
     line-height: 2.3em;
     text-indent: 32px;
+    outline: none;
+}
+
+.Searchbar-glass {
+    position: relative;
+    float: left;
+    top: 27px;
+    left: 10px;
 }

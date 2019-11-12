@@ -1,12 +1,16 @@
 import React from 'react';
 import './Searchbar.css'
-import {searchIcon} from '../../../assets/search-solid.png'
 
-import { url } from 'inspector';
+
+//fort awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
 
 const Searchbar = (props) => {
     return (
         <div className='Searchbar'>
+            <span className={'Searchbar-glass'}><FontAwesomeIcon icon={faSearch}  color='black'/></span>
             <input
             className='Searchbar-input'
             type="text"

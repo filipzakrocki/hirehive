@@ -1,9 +1,12 @@
 import React from "react";
+import './Results.css'
 
 // components
-// job row
+import JobEntry from './JobEntry/JobEntry.js'
+import RowHeaders from './RowHeaders/RowHeaders.js'
 
 const Results = props => {
+
   let finalList = props.jobs ? props.jobs : <p>Awaiting data....</p>;
 
   //category filter
@@ -19,38 +22,34 @@ const Results = props => {
           job =>
             job.description.text
               .toLowerCase()
-              .includes(props.inputFilter.trim()) ||
-            job.title.toLowerCase().includes(props.inputFilter.trim())
+              .includes(props.inputFilter.trim().toLowerCase()) ||
+            job.title.toLowerCase().includes(props.inputFilter.trim().toLowerCase())
         )
       : categoryFilter;
 
   finalList =
     inputFilter.length !== 0 ? (
       inputFilter.map(job => {
-        return <li key={job.id}>{job.title}</li>;
+        return <JobEntry
+        url={job.hostedUrl}
+        key={job.id}
+        title={job.title}
+        stateCode={job.stateCode}
+        country={job.country}
+        location={job.location}
+        category={job.category}/>;
       })
     ) : (
-      <p>No results found...</p>
+      <h1 className='Results-noResults'>No results found...</h1>
     );
 
-  return <ul>{finalList}</ul>;
+  return (
+  <div className='Results__wrapper'>
+    <RowHeaders/>
+    <ul >{finalList}</ul>
+  </div>);
 };
 
 export default Results;
 
-// sample job entry
-// 0:
-// category: "HR"
-// country: {name: "United States", code: "US"}
-// createdDate: 1526466951
-// description: {html: "<p>Supports human resources processes by administe…munication, Teamwork, Microsoft Office Skills</p>", text: "Supports human resources processes by administerin… Communication, Teamwork, Microsoft Office Skills"}
-// experience: {type: "EntryLevel", name: "Entry Level"}
-// hostedUrl: "https://my.hirehive.io/hirehive-testing-account/jobs/34749/human-resources-assistant-san-francisco"
-// id: 34749
-// language: {name: "English", code: "en-US"}
-// location: "San Francisco"
-// publishedDate: 1526466961
-// salary: null
-// stateCode: "CA"
-// title: "Human Resources Assistant"
-// type: {type: "FullTime", name: "Full Time"}
+
