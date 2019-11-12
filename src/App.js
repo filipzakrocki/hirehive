@@ -49,7 +49,7 @@ function App() {
     <div className="App">
       <Search
         jobs={jobs}
-        filterChangeHandler={filterChangeHandler}
+        filterChangeHandler={e => filterChangeHandler(e.target.value)}
         categoryChangeHandler={categoryChangeHandler}
       />
       {results}

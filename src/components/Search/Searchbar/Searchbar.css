@@ -1,0 +1,9 @@
+.Searchbar {
+    margin: auto;
+}
+
+.Searchbar-input {
+    width: 100%;
+    line-height: 2.3em;
+    text-indent: 32px;
+}

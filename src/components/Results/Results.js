@@ -2,7 +2,6 @@ import React from "react";
 
 // components
 // job row
-//
 
 const Results = props => {
   let finalList = props.jobs ? props.jobs : <p>Awaiting data....</p>;

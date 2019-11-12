@@ -1,8 +1,11 @@
 import React from "react";
 
+import './Search.css'
+
 //components
-// job row
+import Searchbar from './Searchbar/Searchbar'
 // input field?
+//category buttons
 
 const Search = props => {
   // mapping unique categories to display as buttons
@@ -22,11 +25,8 @@ const Search = props => {
     : null;
 
   return (
-    <div>
-      <input
-        type="text"
-        onChange={e => props.filterChangeHandler(e.target.value)}
-      ></input>
+    <div className='Search__wrapper'>
+      <Searchbar changed={props.filterChangeHandler}/>
       <div>{categoryButtons}</div>
     </div>
   );
