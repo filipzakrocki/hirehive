@@ -8,13 +8,14 @@ const Search = props => {
   // mapping unique categories to display as buttons
   const categories = props.jobs ? props.jobs.map(el => el.category) : null;
   let categoryButtons = categories
-    ? [...new Set(categories)].map(category => {
+    ? [...new Set(categories)].map(uniqueCategory => {
         return (
           <button
-            key={category}
-            onClick={() => props.categoryChangeHandler(category)}
+            key={uniqueCategory}
+            active={props.category === uniqueCategory}
+            onClick={() => props.categoryChangeHandler(uniqueCategory)}
           >
-            #{category.toUpperCase()}
+            #{uniqueCategory.toUpperCase()}
           </button>
         );
       })

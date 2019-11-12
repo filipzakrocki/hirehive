@@ -31,8 +31,12 @@ function App() {
   const filterChangeHandler = input => {
     setinputFilter(input);
   };
-  const categoryChangeHandler = category => {
-    setCategory(category);
+  const categoryChangeHandler = uniqueCategory => {
+    if (category !== uniqueCategory) {
+      setCategory(uniqueCategory);
+    } else {
+      setCategory("");
+    }
   };
 
   let results = jobs ? (
