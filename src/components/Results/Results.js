@@ -37,7 +37,7 @@ const Results = props => {
         stateCode={job.stateCode}
         country={job.country}
         type={job.type.name}
-        date={job.createdDate}
+        date={job.publishedDate}
         experience={job.experience.name}
         location={job.location}
         category={job.category}/>;

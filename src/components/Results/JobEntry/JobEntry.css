@@ -53,5 +53,8 @@
     flex: 1;
     float: right;
     font-size: 20px;
+}
 
+.JobEntry-content__wrapper:hover .JobEntry-arrow {
+    font-size: 25px;
 }

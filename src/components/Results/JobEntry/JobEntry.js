@@ -12,7 +12,8 @@ const JobEntry = (props) => {
             <div className='JobEntry-title'>
                 <p>{props.title}</p>
                 <span className='JobEntry-extra'>
-                <p>Type: {props.type}, Experience: {props.experience}, Posted on: {UTCstring}</p>
+                <p>Type: {props.type}, Experience: {props.experience}</p>
+                <p>Posted on: {UTCstring}</p>
                 </span>
                 </div>     
             <div className='JobEntry-category'>{props.category}</div>     
