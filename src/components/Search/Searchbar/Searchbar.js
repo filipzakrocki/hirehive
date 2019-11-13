@@ -5,7 +5,7 @@ import "./Searchbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-const Searchbar = props => {
+const searchbar = props => {
   return (
     <div className="Searchbar__wrapper">
       <div className={"Searchbar-glass"}>
@@ -22,4 +22,4 @@ const Searchbar = props => {
   );
 };
 
-export default Searchbar;
+export default searchbar;

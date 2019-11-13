@@ -56,7 +56,7 @@ const Results = props => {
         );
       })
     ) : (
-      <h1 className="Results-noResults">No results found...</h1>
+      <h1 className="Results-noResults">No results found... Try again!</h1>
     );
 
   return (

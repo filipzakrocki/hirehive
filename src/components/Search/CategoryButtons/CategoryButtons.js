@@ -1,7 +1,7 @@
 import React from "react";
 import "./CategoryButtons.css";
 
-const CategoryButtons = props => {
+const categoryButtons = props => {
   let categoryButtons = null;
 
   // checking for selected category and input to light up the button if matching
@@ -36,4 +36,4 @@ const CategoryButtons = props => {
   return <div className="CategoryButtons__wrapper">{categoryButtons}</div>;
 };
 
-export default CategoryButtons;
+export default categoryButtons;

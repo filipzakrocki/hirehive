@@ -1,7 +1,7 @@
 import React from "react";
 import "./JobEntry.css";
 
-const JobEntry = props => {
+const jobEntry = props => {
   const formattedDate = new Date(props.date * 1000);
   const UTCstring = formattedDate.toUTCString();
 
@@ -42,4 +42,4 @@ const JobEntry = props => {
   );
 };
 
-export default JobEntry;
+export default jobEntry;
