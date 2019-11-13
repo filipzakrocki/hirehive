@@ -28,7 +28,7 @@ function App() {
 
   //state with react hooks
   const [jobs, setJobs] = useState();
-  const [inputFilter, setinputFilter] = useState();
+  const [inputFilter, setinputFilter] = useState("");
   const [category, setCategory] = useState();
   const [error, setError] = useState();
 
@@ -47,11 +47,11 @@ function App() {
   };
 
   //error message for errors, spinner for data fetching
-  let results = null;
+  let resultsComponent = null;
   if (error) {
-    results = <h1 className="App-error">{error}</h1>;
+    resultsComponent = <h1 className="App-error">{error}</h1>;
   } else if (jobs) {
-    results = (
+    resultsComponent = (
       <Results
         error={error}
         jobs={jobs}
@@ -60,7 +60,7 @@ function App() {
       />
     );
   } else {
-    results = <Spinner />;
+    resultsComponent = <Spinner />;
   }
 
   return (
@@ -69,10 +69,11 @@ function App() {
         jobs={jobs}
         disabled={error}
         category={category}
+        inputFilter={inputFilter}
         filterChangeHandler={e => filterChangeHandler(e.target.value)}
         categoryChangeHandler={categoryChangeHandler}
       />
-      {results}
+      {resultsComponent}
     </div>
   );
 }

@@ -13,6 +13,7 @@ const Search = props => {
         disabled={props.disabled}
       />
       <CategoryButtons
+        inputFilter={props.inputFilter}
         category={props.category}
         clicked={props.categoryChangeHandler}
         jobs={props.jobs}
