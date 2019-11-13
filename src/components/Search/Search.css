@@ -1,5 +1,11 @@
 .Search__wrapper {
-    background: black;
-    padding: 5% 10%;
-    width: 100%;
+  background: black;
+  padding: 5% 10%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .Search__wrapper {
+    padding-bottom: 15%;
+  }
 }
