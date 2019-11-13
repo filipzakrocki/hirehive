@@ -20,6 +20,6 @@
 
 @media only screen and (max-width: 600px) {
   .Searchbar-input::placeholder {
-    font-size: 12px;
+    font-size: 10.5px;
   }
 }
