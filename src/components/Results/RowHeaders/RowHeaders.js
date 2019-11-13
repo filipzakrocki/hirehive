@@ -7,6 +7,7 @@ const RowHeaders = () => {
             <div className='RowHeaders-title'>POSITION</div>     
             <div className='RowHeaders-category'>CATEGORY</div>     
             <div className='RowHeaders-location'>LOCATION</div>
+            <div className='RowHeaders-spacer'></div>
         </div>
     );
 }

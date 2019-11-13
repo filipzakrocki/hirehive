@@ -28,6 +28,17 @@
     flex: 5;
     font-size: 18px;
 }
+
+.JobEntry-extra {
+    display: none;
+    font-size: 10px;
+    color: gray
+}
+
+.JobEntry-content__wrapper:hover .JobEntry-extra {
+    display: block;
+}
+
 .JobEntry-category {
     flex: 3;
     font-size: 14px;
@@ -38,9 +49,9 @@
     color: gray;
 }
 
-.JobEntr-arrow {
+.JobEntry-arrow {
     flex: 1;
     float: right;
     font-size: 20px;
-    margin-right: 20px;
+
 }

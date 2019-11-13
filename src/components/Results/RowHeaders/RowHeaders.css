@@ -22,5 +22,7 @@
 .RowHeaders-location {
     flex: 3;
     font-size: 12px;
-
+}
+.RowHeaders-spacer {
+    flex: 1
 }

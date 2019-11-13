@@ -12,6 +12,7 @@ const Searchbar = (props) => {
         <div className='Searchbar'>
             <span className={'Searchbar-glass'}><FontAwesomeIcon icon={faSearch}  color='black'/></span>
             <input
+            disabled={props.disabled}
             className='Searchbar-input'
             type="text"
             placeholder={'Search by keyword, technology or job title'}

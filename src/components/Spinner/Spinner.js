@@ -1,6 +1,6 @@
 import React from "react";
-import "./Spinner2.css";
+import "./Spinner.css";
 
-const spinner = () => <div className="Loader">Loading...</div>;
+const spinner = () =>  <img alt={'spinner'} className='rotate' src={'https://hirehive.com/wp-content/uploads/2018/05/cropped-favicon-512-400x400.png'}/>
 
 export default spinner;

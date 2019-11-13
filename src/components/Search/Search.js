@@ -11,7 +11,7 @@ const Search = props => {
 
   return (
     <div className='Search__wrapper'>
-      <Searchbar changed={props.filterChangeHandler}/>
+      <Searchbar changed={props.filterChangeHandler} disabled={props.disabled}/>
       <CategoryButtons category={props.category} clicked={props.categoryChangeHandler} jobs={props.jobs}/>
     </div>
   );

@@ -1,5 +1,6 @@
 .Searchbar {
     margin: auto;
+    background: black;
 }
 
 .Searchbar-input {
@@ -13,5 +14,5 @@
     position: relative;
     float: left;
     top: 27px;
-    left: 10px;
+    left: 8px;
 }

@@ -36,6 +36,9 @@ const Results = props => {
         title={job.title}
         stateCode={job.stateCode}
         country={job.country}
+        type={job.type.name}
+        date={job.createdDate}
+        experience={job.experience.name}
         location={job.location}
         category={job.category}/>;
       })
@@ -51,5 +54,7 @@ const Results = props => {
 };
 
 export default Results;
+
+
 
 
