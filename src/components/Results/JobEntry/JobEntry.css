@@ -20,10 +20,6 @@
   outline: none;
 }
 
-.JobEntry-content__wrapper:hover {
-  transform: scale(1.02);
-}
-
 .JobEntry-title {
   flex: 5;
   font-size: 18px;
@@ -55,10 +51,6 @@
   font-size: 20px;
 }
 
-.JobEntry-content__wrapper:hover .JobEntry-arrow {
-  font-size: 25px;
-}
-
 @media only screen and (max-width: 600px) {
   .JobEntry {
     margin-bottom: 20px;
@@ -82,10 +74,6 @@
 
   .JobEntry-content__wrapper {
     min-height: 60px;
-  }
-
-  .JobEntry-content__wrapper:hover {
-    transform: none;
   }
 
   .JobEntry-content__wrapper:hover .JobEntry-arrow {
