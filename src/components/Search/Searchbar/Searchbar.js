@@ -2,7 +2,7 @@ import React from 'react';
 import './Searchbar.css'
 
 
-//fort awesome
+//font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,14 +13,12 @@ const Searchbar = (props) => {
             <div className={'Searchbar-glass'}>
                 <FontAwesomeIcon icon={faSearch}  color='black'/>
             </div>
-            <input
-            disabled={props.disabled}
-            className='Searchbar-input'
-            type="text"
-            placeholder={'Search by keyword, technology or job title'}
-            onChange={props.changed}>
-            </input>
-
+                <input
+                disabled={props.disabled}
+                className='Searchbar-input'
+                type="text"
+                placeholder={'Search by keyword, technology or job title'}
+                onChange={props.changed}/>
         </div>
     );
 }
