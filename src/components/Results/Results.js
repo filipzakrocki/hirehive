@@ -14,28 +14,19 @@ const Results = props => {
       ? props.jobs.filter(job => props.category === job.category)
       : props.jobs;
 
+  //input in lower case without spaces before or after
+  const input = props.inputFilter.trim().toLowerCase();
+
   //input filter
   const inputFilter =
     props.inputFilter && props.inputFilter.length > 1
       ? categoryFilter.filter(
           job =>
-            job.description.text
-              .toLowerCase()
-              .trim()
-              .includes(props.inputFilter.trim().toLowerCase()) ||
-            job.title.toLowerCase().includes(props.inputFilter.toLowerCase()) ||
-            job.location
-              .toLowerCase()
-              .trim()
-              .includes(props.inputFilter.trim().toLowerCase()) ||
-            job.country.name
-              .toLowerCase()
-              .trim()
-              .includes(props.inputFilter.trim().toLowerCase()) ||
-            `#${job.category}`
-              .toLowerCase()
-              .trim()
-              .includes(props.inputFilter.trim().toLowerCase())
+            job.description.text.toLowerCase().includes(input) ||
+            job.title.toLowerCase().includes(input) ||
+            job.location.toLowerCase().includes(input) ||
+            job.country.name.toLowerCase().includes(input) ||
+            `#${job.category}`.toLowerCase().includes(input)
         )
       : categoryFilter;
 
