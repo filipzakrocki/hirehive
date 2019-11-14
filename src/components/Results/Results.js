@@ -16,24 +16,23 @@ const Results = props => {
 
   //input filter
   const inputFilter =
-    props.inputFilter && props.inputFilter.length > 1
+    props.inputFilter &&
+    props.inputFilter.length > 1 && !props.inputFilter.includes(" ")
       ? categoryFilter.filter(
           job =>
             job.description.text
               .toLowerCase()
-              .includes(props.inputFilter.trim().toLowerCase()) ||
-            job.title
-              .toLowerCase()
-              .includes(props.inputFilter.trim().toLowerCase()) ||
+              .includes(props.inputFilter.toLowerCase()) ||
+            job.title.toLowerCase().includes(props.inputFilter.toLowerCase()) ||
             job.location
               .toLowerCase()
-              .includes(props.inputFilter.trim().toLowerCase()) ||
+              .includes(props.inputFilter.toLowerCase()) ||
             job.country.name
               .toLowerCase()
-              .includes(props.inputFilter.trim().toLowerCase()) ||
+              .includes(props.inputFilter.toLowerCase()) ||
             `#${job.category}`
               .toLowerCase()
-              .includes(props.inputFilter.trim().toLowerCase())
+              .includes(props.inputFilter.toLowerCase())
         )
       : categoryFilter;
 
