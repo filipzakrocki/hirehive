@@ -52,12 +52,7 @@ function App() {
     resultsComponent = <h1 className="App-error">{error}</h1>;
   } else if (jobs) {
     resultsComponent = (
-      <Results
-        error={error}
-        jobs={jobs}
-        inputFilter={inputFilter}
-        category={category}
-      />
+      <Results jobs={jobs} inputFilter={inputFilter} category={category} />
     );
   } else {
     resultsComponent = <Spinner />;
